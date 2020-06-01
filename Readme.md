@@ -20,14 +20,10 @@ To install the libraries just type the followings
 ```bash
 pip install matplotlib
 pip install requests
+pip install pandas
 ```
 
-(You don't need to install numpy or pandas separately as matplotlib will download them)
+(You don't need to install numpy separately as matplotlib will download them)
 
 ***
-
-# Usage
-
-On your first start up, run the `help` command and see all the available commands. And explore. If you need a indepth explanition, then I highly encourage you to read [this](). This is the official post of **DevDashboard** in [dev.to](https://www.dev.to).
-
 
