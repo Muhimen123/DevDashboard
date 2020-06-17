@@ -217,3 +217,26 @@ def graph_pie_tags():
     p=plt.gcf()
     p.gca().add_artist(my_circle)
     plt.show()
+
+def progress_avg(filters):
+    attributes = filters.split('-')
+    if len(attributes) == 2:
+        attributes = ['Views', 'Reactions', 'Comments']
+    else:
+        attributes = attributes[2:]
+
+    data = pd.read_csv('data.csv')
+
+    for attribute in attributes:
+        tmp = list(data[attribute.title()])[::-1]
+        curr_sum = 0
+        ls = []
+        for i in range(len(tmp)):
+            curr_sum += tmp[i]
+            tmp_avg = curr_sum // (i + 1)
+            ls.append(tmp_avg)
+
+        x_axis = [i for i in range(len(ls))]
+        plt.plot(x_axis, ls, label=attribute.title(), marker='o')
+        plt.legend()
+    plt.show()

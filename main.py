@@ -28,15 +28,26 @@ def help():
     print("You can also try this: \tgraph-bar-reactions-comments")
     print("Protips: Try changing the attributes")
 
-    print("\ngraph-progress >>> Shows a ojive curve for all of your post(including views, comments, reactions)")
+    print("\ngraph-progress >>> Shows a line chart for all of your post(including views, comments, reactions)")
 
-    print("graph-progress-views >>> Ojive curve only for the post views")
-    print("graph-progress-coments >>> Ojive curve only for the post comments")
-    print("graph-progress-reactions >>> Ojive curve only for the post reactions")
+    print("graph-progress-views >>> line chart only for the post views")
+    print("graph-progress-coments >>> line chart only for the post comments")
+    print("graph-progress-reactions >>> line chart only for the post reactions")
     print("You can also try this: \tgraph-progress-reactions-comments")
     print("Protips: Try changing the attributes")
 
     print('\ngraph-pie-tags >>> Pie chart for used tags')
+
+    print('\n')
+
+    print("graph-avg >>> Histogram for all your post(including views, comments, reactions)")
+
+
+    print("graph-avg-views >>> Line chart only for the post views")
+    print("graph-avg-comments >>> Line chart only for the post comments")
+    print("graph-avg-reactions >>> Line chart only for the post reactions")
+    print("You can also try this: \tgraph-avg-reactions-comments")
+    print("Protips: Try changing the attributes")
 
     print('\n')
 
@@ -50,10 +61,8 @@ def help():
 
 
 cmd = 'pass'
-
 while cmd.lower() != 'quit':
     cmd = input("==> ")
-    
     if cmd.lower() == 'help':
         print('\n\n')
         help()
@@ -104,6 +113,9 @@ while cmd.lower() != 'quit':
     elif 'graph-progress-' in cmd.lower():
         print('\n\n')
         graph.graph_progress_filter(cmd.lower())
+    elif 'graph-avg' in cmd.lower():
+        print('\n\n')
+        graph.progress_avg(cmd.lower())
 
     else:
         print('\n\n')
