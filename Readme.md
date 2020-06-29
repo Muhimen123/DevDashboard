@@ -40,5 +40,5 @@ Enter the API key that you recently generated, you are now all set!
 # Getting started
 The program itself isn't that much complicated. You can learn how to use it all by yourself. However, if you want to have a more detailed instruction, I recommend you to read this [blog post](https://dev.to/muhimen123/i-made-a-data-analyzer-for-dev-to-3pol). Things are explained quite broadly here.
 
-##Thank you for your time
+## Thank you for your time
 
